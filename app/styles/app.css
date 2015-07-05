@@ -1,0 +1,7 @@
+.data-grid-cell{
+  display: inline-block;
+  
+}
+.data-grid-row{
+  display: block;
+}

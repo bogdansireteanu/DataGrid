@@ -1,0 +1,6 @@
+{{#data-grid items=model as |parentGrid|}}
+  {{data-grid-column bindingPath="id" headerText="Id" registerWith=parentGrid viewComponent="view-component" editComponent="edit-component" width=300}}
+  {{data-grid-column bindingPath="title" headerText="Title" registerWith=parentGrid viewComponent="view-component" editComponent="edit-component" width=180}}
+  {{data-grid-column bindingPath="description" headerText="Description" registerWith=parentGrid viewComponent="view-component" editComponent="edit-component" width=180}}
+{{/data-grid}}
+{{outlet}}

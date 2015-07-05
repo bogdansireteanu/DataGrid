@@ -1,0 +1,15 @@
+{{yield model}}
+<div class="header">
+	{{#each model.columns as |headerColumn headerColumnIndex|}}
+		{{data-grid-header-cell column=headerColumn index=headerColumnIndex}}
+	{{/each}}
+</div>
+<div>
+	{{#each model.rows key="index" as |item|}}
+		{{#data-grid-row setAsSelected=(action "setAsSelected") model=item height=rowHeight as |row|}}
+			{{#each model.columns as |column columnIndex|}}
+				{{data-grid-cell item=row.data column=column index=columnIndex isEditing=row.isEditing}}
+			{{/each}}
+		{{/data-grid-row}}
+	{{/each}}
+</div>
